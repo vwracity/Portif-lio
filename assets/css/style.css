@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Setup e utlidades */
+
+
+:root {
+    --color-primary: #e02d2d;
+    --color-black: #191919;
+    --color-white: #EEf2f5;
+    
+    font-family: "Poppins", Helvetica, sans-serif ;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-black);
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-primary);
+    width: fit-content;
+
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+
+    font-size: 14px;
+    color: var(--color-white);
+    text-decoration: none;
+
+    transition: 150 ms;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+}
+
+.w-100{
+    width: 100%;
+}
+
+.bg-dark{
+    background-color: var(--color-black);
+
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 1.5rem;
+}
+
+section > h2 {
+    
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+
+    text-transform: uppercase;
+
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        max-width: 1180px;
+        margin: auto;
+    }
+}
+
+
+/*Header*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    padding: 1rem 1.5rem;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+}
+header h1{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+header nav {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    header nav{
+        display: flex;
+    }
+}
+
+#home {
+
+    justify-content: center;
+
+    padding: 0;
+
+    height: 700px;
+
+}
+
+.home-cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+   
+    height: 600px;
+    padding-inline: 1.5rem;
+    
+    background-image: url('/assets/img/darth-mobile.png');
+    background-repeat: no-repeat;
+    background-position: -11rem;
+    background-size: 430px;
+}
+
+#home > img{
+    display: none;
+}
+
+.home-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.home-heading > h1{
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 500;
+    
+    margin: 0;
+}
+
+.home-heading > p {
+    line-height: 150%;
+    
+    margin: 0;
+}
+
+@media screen and (min-width: 1024px){
+    #home{
+        flex-direction: row;   
+        align-items: center; 
+        justify-content: space-between;
+    }
+
+    #home > img{
+        display: block;
+
+        width: 444px;
+        height: 444px;
+    }
+   
+    .home-cta{
+        background: none;
+    }
+    
+}
+
+/*Sobre*/
+
+#sobre {
+    gap: 1rem;
+  
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+}
+
+
+.mobile-sobre > img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.sobre-links{
+    display: flex;
+  
+    gap: 1.5rem;
+
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+.desktop-sobre{
+    display: none;
+    gap: 1.5rem;
+
+}
+
+.sobre-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.desktop-sobre img{
+    max-width: 460px;
+    border-radius: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+    .mobile-sobre{
+        display: none;
+    }
+    .desktop-sobre{
+        display: flex;
+        gap: 92px;
+    }
+    .desktop-sobre h2 {
+        margin: 0;
+    }
+} 
+    
+
+/*Projetos*/
+
+#projetos{
+    gap: 1.5rem;
+}
+.card{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1.25rem;
+
+    border-radius: 4px;
+
+    max-width: 250px;
+}
+
+.card > img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card > h3{
+    font-weight: 18px;
+    font-weight: 500;
+
+}
+
+.card-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    #projetos{
+        align-items: center;
+
+    }
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+/*Servicos e conhecimentos*/
+
+#servicos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+}
+
+.baselist{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+
+.baselist > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+
+    background: var(--color-primary);
+
+    border-radius: 3px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.servicos-list{
+    gap: 1rem;
+}
+
+.conhecimentos-list{
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.conhecimentos-list >li {
+    width: 72px;
+    height: 72px;
+}
+
+.conhecimentos-list >li >img {
+    width: 72px;
+
+}
+
+@media screen and (min-width: 1024px) {
+    #servicos{
+        flex-direction: row;
+    }
+    
+    #servicos > div{
+        flex-basis: 50%;
+    }
+
+    .servicos-list{
+        flex-direction: column;
+    }
+    
+    .servicos-list > li{
+        align-items: start;
+        height: 64px;
+        max-width: 320px;
+    }
+
+}
+
+/* Contato */
+
+#contato {
+    gap: 3rem;
+
+    padding-block: 4rem;
+}
+
+
+
+
+#contato > h2{
+    margin: 0;
+}
+
+#contato {
+    margin: 0;
+}
+
+#contato > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+#contato > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.icon-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 2rem;
+
+}
+
+#contato  ul  li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    width: 2rem;
+
+}
+
+
+#contato a {
+    color: var(--color-black);
+    text-decoration: none;
+
+}
+
+#contato cite {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+
+    text-transform: uppercase;
+}
+@media screen and (min-width: 1024px) {
+    #contato{
+        align-items: center;
+    }
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: 1.5rem;
+
+    background-color: var(--color-primary);
+}
+
+footer a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--color-black);
+    font-size: 300;
+    text-decoration: none;
+}
+
+footer img{
+    height: 24px;
+
+}
